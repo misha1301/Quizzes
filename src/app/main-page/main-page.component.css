@@ -1,0 +1,20 @@
+.main-section{
+  display: flex;
+  flex-direction: column;
+}
+.main-section .main-text{
+  color: #463646;
+  font-size: 24px;
+  font-weight: 500;
+}
+.main-section .addition-text{
+  font-size: 24px;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.quizzes-section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-main-page);
+}

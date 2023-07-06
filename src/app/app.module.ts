@@ -8,6 +8,7 @@ import { QuizzesPageComponent } from './quizzes-page/quizzes-page.component';
 import { ResultPageComponent } from './result-page/result-page.component';
 import { StatisticsPageComponent } from './statistics-page/statistics-page.component';
 import { ButtonComponent } from '../components/button/button.component';
+import { QuizBlockComponent } from '../components/quiz-block/quiz-block.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ButtonComponent } from '../components/button/button.component';
     QuizzesPageComponent,
     ResultPageComponent,
     StatisticsPageComponent,
-    ButtonComponent
+    ButtonComponent,
+    QuizBlockComponent
   ],
   imports: [
     BrowserModule,
@@ -26,4 +28,5 @@ import { ButtonComponent } from '../components/button/button.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

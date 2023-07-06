@@ -17,7 +17,6 @@ export class ButtonComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
   emitEvent(){
     this.onClick.emit();
   }

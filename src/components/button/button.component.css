@@ -8,13 +8,13 @@ input[type="button"] {
 }
 
 input[type="button"].blue {
-  background: #1b18ac;
+  background: var(--btn-color-blue);
 }
 
 input[type="button"].blue:hover {
-  background: #16148b;
+  background: var(--btn-color-blue-active);
 }
 
 input[type="button"].blue:active {
-  background: #1b18ac;
+  background: var(--btn-color-blue);
 }
