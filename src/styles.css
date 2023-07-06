@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+
+  font-family: Inter;
+  font-style: normal;
+  line-height: normal;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/mesh-gradient.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center, 50%, 50%;
+  background-attachment: fixed;
+
+  padding: 0px 50px;
+}
