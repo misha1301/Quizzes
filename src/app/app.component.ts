@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'quizzes-nerdy-soft';
+  
+  log(){
+    console.log("clicling");
+  }
 }

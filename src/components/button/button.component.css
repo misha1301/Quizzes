@@ -1,0 +1,20 @@
+input[type="button"] {
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input[type="button"].blue {
+  background: #1b18ac;
+}
+
+input[type="button"].blue:hover {
+  background: #16148b;
+}
+
+input[type="button"].blue:active {
+  background: #1b18ac;
+}
