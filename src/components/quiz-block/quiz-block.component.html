@@ -1,1 +1,11 @@
-<p>quiz-block works!</p>
+<section>
+  <div>
+    <article>
+      {{quizName}}
+    </article>
+    <p>
+      {{quizData}}
+    </p>
+  </div>
+  <app-button [btnClass]="'blue'" [btnValue]="'Start quiz'" (onClick)="emitEvent()"></app-button>
+</section>

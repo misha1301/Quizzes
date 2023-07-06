@@ -23,3 +23,12 @@ body {
 
   padding: 0px 50px;
 }
+
+:root {
+  --line: 1px dashed #8a959f;
+  --btn-color-blue: #1b18ac;
+  --btn-color-blue-active: #16148b;
+  --btn-color-yellow: #EE8D1B;
+  --btn-color-yellow-active: #cd7a17;
+  --gap-main-page: 20px;
+}
