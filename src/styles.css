@@ -1,13 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap");
+/*@import "../node_modules/bootstrap/dist/css/bootstrap.css";*/
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: #ffffff;
 
-  font-family: Inter;
+  font-family: Inter, serif;
   font-style: normal;
   line-height: normal;
 }
@@ -15,20 +16,112 @@
 body {
   height: 100%;
   width: 100%;
+  min-height: 100vh;
   background-image: url("./assets/mesh-gradient.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center, 50%, 50%;
-  background-attachment: fixed;
-
-  padding: 0px 50px;
+  padding: var(--padding-global);
 }
 
 :root {
+  /*paddings*/
+  --padding-global: 50px 50px;
+  --padding-quiz-section: 20px 30px;
+  --gap-quizzes-block: 20px;
+  --gap-stats-titles: 38px;
+
+  --minmax-quizzes-grid: 400px;
+
+  /*margins*/
+  --margin-main-description-text: 30px 0 20px 0;
+  --margin-20: 20px;
+  --margin-50: 50px;
+
+  /*font size*/
+  --font-name-quizzes-size: 48px;
+  --font-main-description-size: 24px;
+  --font-title-page-size: 32px;
+  --font-title-quiz-block-size: 32px;
+  --font-subtitle-quiz-block-size: 16px;
+  --font-quiz-unswers-size: 24px;
+  --btn-font-size: 16px;
+
+  /*font color*/
+  --font-color-level-1: #ffffff;
+  --font-color-level-2: #3A233A;
+  --font-color-level-3: #BDBDBD;
+
+  /*font weight*/
+  --font-semibold-weight: 600;
+  --font-medium-weight: 500;
+
+  --quiz-block-height: 160px;
+  --pie-diagram-width:350px;
+
   --line: 1px dashed #8a959f;
+  --btn-height: 40px;
+  --btn-width: 150px;
   --btn-color-blue: #1b18ac;
   --btn-color-blue-active: #16148b;
   --btn-color-yellow: #EE8D1B;
   --btn-color-yellow-active: #cd7a17;
   --gap-main-page: 20px;
+
+  --radio-size: 40px;
 }
+
+@media screen and (max-width: 840px) {
+  :root {
+    /*paddings*/
+    --padding-global: 20px 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+
+    --padding-quiz-section: 10px 20px;
+    --margin-20: 10px;
+    --margin-50: 20px;
+
+    --gap-stats-titles: 20px;
+
+    --font-name-quizzes-size: 32px;
+    --font-main-description-size: 16px;
+    --font-title-quiz-block-size: 20px;
+    --font-subtitle-quiz-block-size: 14px;
+    --font-title-page-size: 24px;
+    --font-quiz-unswers-size: 20px;
+
+    --quiz-block-height: 125px;
+
+    --btn-height: 30px;
+    --btn-width: 115px;
+    --btn-font-size: 14px;
+
+    --radio-size: 30px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  :root {
+    --gap-main-page: 10px;
+    --margin-main-description-text: 20px 0;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  :root {
+    --font-title-page-size: 20px;
+    --margin-main-description-text: 20px 0 10px 0;
+    --minmax-quizzes-grid: 250px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :root {
+    --pie-diagram-width:130px;
+  }
+}
+

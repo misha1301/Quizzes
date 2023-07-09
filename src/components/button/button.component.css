@@ -1,12 +1,16 @@
 input[type="button"] {
-  width: 150px;
-  height: 40px;
+  width: var(--btn-width);
+  height: var(--btn-height);
   border-radius: 10px;
   border: 0;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-medium-weight);
+  outline: none !important;
 }
 
+input[type="button"]:hover{
+  cursor: pointer;
+}
 input[type="button"].blue {
   background: var(--btn-color-blue);
 }
@@ -18,3 +22,19 @@ input[type="button"].blue:hover {
 input[type="button"].blue:active {
   background: var(--btn-color-blue);
 }
+input[type="button"].yellow {
+  background: var(--btn-color-yellow);
+}
+
+input[type="button"].yellow:hover {
+  background: var(--btn-color-yellow-active);
+}
+
+input[type="button"].yellow:active {
+  background: var(--btn-color-yellow);
+}
+
+input[type="button"]:disabled{
+  opacity: 60%;
+}
+

@@ -1,22 +1,102 @@
-.quizzes-page-section{
+.quizzes-page-section {
 }
 
-.quizzes-page-section .task-data{
-  font-size: 32px;
-  font-weight: 600;
-
-  margin: 30px 0;
+.quizzes-page-section .task-data {
+  font-size: var(--font-title-page-size);
+  font-weight: var(--font-semibold-weight);
+  margin: var(--margin-main-description-text);
 }
 
-.quizzes-page-section .quiz-section{
+.quizzes-page-section .quiz-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   border-radius: 10px;
   background-color: rgba(23, 24, 51, 0.40);
   backdrop-filter: blur(12px);
 
   /*max-width: 660px;*/
   /*height: 160px;*/
-  padding: 20px 30px;
+  padding: var(--padding-quiz-section);
+}
+
+.quiz-question-paragraph{
+  font-size: var(--font-title-quiz-block-size);
+  font-weight: var(--font-semibold-weight);
+}
+
+.quiz-answers-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-main-page);
+  margin: 20px 10px;
+
+  border: var(--line);
+}
+
+.quiz-answers-block .quiz-answer-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.quiz-answers-block .quiz-answer-label:hover {
+  cursor: pointer;
+}
+
+.quiz-answers-block .quiz-answer-label p {
+  color: #3A233A;
+  font-size: var(--font-quiz-unswers-size);
+  font-weight: var(--font-medium-weight);
+  margin-left: var(--margin-20);
+}
+.quizzes-page-section form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: var(--line);
+}
+.quizzes-page-section app-button{
+  align-self: flex-end;
+}
+.quiz-answers-block .quiz-answer-label .checked{
+  color: #e0e0e0;
+}
+
+.custom-radio-component {
+  position: relative;
+  outline: none !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  height: var(--radio-size);
+  width: var(--radio-size);
+
+  border-radius: 50%;
+  border: 1px #ffffff solid;
+}
+
+.radio-component-circle {
+  /*position: absolute;*/
+  /*top: 4px;*/
+  /*left: 4px;*/
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px #ffffff solid;
+
+  height: 80%;
+  width: 80%;
+}
+.custom-radio-component:hover {
+  cursor: pointer;
+}
+.custom-radio-component input[type="radio"] {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  opacity: 0;
+}
+.custom-radio-component input[type="radio"]:checked + .radio-component-circle {
+  background: #ffffff;
 }

@@ -1,0 +1,45 @@
+.user-stats-page-section h2{
+  margin: var(--margin-main-description-text);
+  font-size: var(--font-title-page-size);
+  font-weight: var(--font-semibold-weight);
+}
+
+.user-stats-wrapper {
+  /*display: grid;*/
+  /*gap: var(--gap-main-page);*/
+  /*grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: var(--gap-main-page);
+}
+
+.user-stats-wrapper > *{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-width: var(--minmax-quizzes-grid);
+}
+.user-quiz-resul-wrapper{
+  display: grid;
+  gap: var(--gap-main-page);
+  grid-template-columns: repeat(auto-fit, minmax(var(--minmax-quizzes-grid), 1fr));
+  height: min-content;
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  /*flex-direction: row;*/
+  /*gap: 20px;*/
+}
+
+/*.user-quiz-resul-wrapper > *{*/
+/*  flex-grow: 1;*/
+/*  flex-shrink: 1;*/
+/*  flex-basis: auto;*/
+/*  min-width: 400px;*/
+/*}*/
+app-quizzes-stats{
+  max-width: 820px;
+}
+app-quiz-result-block{
+  height: var(--quiz-block-height);
+}

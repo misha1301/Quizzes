@@ -1,9 +1,29 @@
 <section class="quizzes-page-section">
   <h2 class="task-data">
-    Books / question 1/10
+    {{quizName}} / question {{quizNumber}}/10
   </h2>
   <section class="quiz-section">
-
-
+    <form>
+      <p class="quiz-question-paragraph">
+        {{quizQuestion}}
+      </p>
+      <div class="quiz-answers-block">
+        <ng-template ngFor let-item [ngForOf]="quizAnswer" let-i="index">
+          <label class="quiz-answer-label">
+            <div class="custom-radio-component">
+              <input
+                [value]="i+1"
+                name="quizzes"
+                type="radio"
+                (change)="consoleHandler($event)"
+              />
+              <div class="radio-component-circle"></div>
+            </div>
+            <p [class]="currentAnswer == i+1 ? 'checked' : '' ">{{item}}</p>
+          </label>
+        </ng-template>
+      </div>
+      <app-button [btnDisabled] = "currentAnswer == 0" [btnValue]="'Next question'" [btnClass]="'blue'"></app-button>
+    </form>
   </section>
 </section>

@@ -3,22 +3,21 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   width: 100%;
-  padding-top: 50px;
-
-  height: 110px;
-
   border: var(--line);
 }
-
 article {
-  font-size: 48px;
-  font-weight: 600;
+  font-size: var(--font-name-quizzes-size);
+  font-weight: var(--font-semibold-weight);
+  color: var(--font-color-level-1);
   border: 1px #d5d5d5 dashed;
 }
-
-main{
-    width: 100%;
-    border: var(--line);
+main {
+  width: 100%;
+  border: var(--line);
+}
+.main-app-section{
+  max-width: 1950px;
+  min-width: 250px;
+  margin: 0 auto;
 }

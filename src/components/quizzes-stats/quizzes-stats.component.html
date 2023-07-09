@@ -1,0 +1,25 @@
+<section class="quiz-stats-section">
+  <section class="quiz-stats-data-section">
+    <div>
+      <h2>{{numberOfQuizzes}} {{numberOfQuizzes >= 2 ? ' quizzes' : ' quiz'}}</h2>
+      <p>{{numberOfQuizzes >= 2 ? 'were ' : 'was '}}played</p>
+    </div>
+    <div>
+      <h2>{{totalAnswers}} questions</h2>
+      <p>have been answered</p>
+    </div>
+    <div>
+      <h2>{{averageTime}} min.</h2>
+      <p>average time of answering quizzes</p>
+    </div>
+  </section>
+  <section class="quiz-stats-diagram-section">
+    <div class="stats-diagram">
+      <app-pie-diagram></app-pie-diagram>
+    </div>
+    <div class="diagram-description">
+
+    </div>
+  </section>
+</section>
+

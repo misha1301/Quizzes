@@ -7,18 +7,21 @@ section{
   background-color: rgba(23, 24, 51, 0.40);
   backdrop-filter: blur(12px);
 
-  max-width: 660px;
-  height: 160px;
-  padding: 20px 30px;
+  max-width: 820px;
+  height: var(--quiz-block-height);
+  padding: var(--padding-quiz-section);
 }
 
 section div > article{
-  font-size: 32px;
-  font-weight: 600;
+  font-size: var(--font-title-quiz-block-size);
+  font-weight: var(--font-semibold-weight);
 }
 
 section div > p{
-  color: #BDBDBD;
-  font-size: 16px;
-  font-weight: 500;
+  margin-top:5px;
+  color: var(--font-color-level-3);
+  font-size: var(--font-subtitle-quiz-block-size);
+  font-weight: var(--font-medium-weight);
 }
+
+
