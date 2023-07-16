@@ -1,6 +1,6 @@
 <section class="quizzes-page-section">
   <h2 class="task-data">
-    {{quizName}} / question {{quizNumber}}/10
+    {{quizName}} / question {{currentQuestion + 1}}/10
   </h2>
   <section class="quiz-section">
     <form>
@@ -12,18 +12,19 @@
           <label class="quiz-answer-label">
             <div class="custom-radio-component">
               <input
-                [value]="i+1"
-                name="quizzes"
+                [value]="item"
+                [name]="'quizzes'+currentQuestion"
                 type="radio"
-                (change)="consoleHandler($event)"
+                [defaultChecked]="false"
+                (change)="answerHandler($event)"
               />
               <div class="radio-component-circle"></div>
             </div>
-            <p [class]="currentAnswer == i+1 ? 'checked' : '' ">{{item}}</p>
+            <p [class]="currentAnswer == item ? 'checked' : '' ">{{item}}</p>
           </label>
         </ng-template>
       </div>
-      <app-button [btnDisabled] = "currentAnswer == 0" [btnValue]="'Next question'" [btnClass]="'blue'"></app-button>
+      <app-button [btnDisabled] = "currentAnswer == ''" [btnValue]="currentQuestion + 1 == totalQuestion ? 'Finish quiz': 'Next question'" [btnClass]="'blue'" (onClick)="goNextQuestion()"></app-button>
     </form>
   </section>
 </section>

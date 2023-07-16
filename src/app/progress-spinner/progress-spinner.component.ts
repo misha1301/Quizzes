@@ -1,10 +1,10 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import {LoaderService} from '../../app/loader.service'
+import {LoaderService} from '../loader.service'
 @Component({
   selector: 'app-progress-spinner',
   templateUrl: './progress-spinner.component.html',
   styleUrls: ['./progress-spinner.component.css'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  // encapsulation: ViewEncapsulation.ShadowDom
 })
 
 export class ProgressSpinnerComponent {

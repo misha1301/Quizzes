@@ -14,6 +14,10 @@
   margin: var(--margin-main-description-text);
   color:var(--font-color-level-1)
 }
+.main-section > app-button{
+  margin-bottom: var(--margin-20);
+  margin-left: auto;
+}
 .quizzes-section{
   display: grid;
   gap: var(--gap-main-page);

@@ -4,16 +4,16 @@
       {{quizName}}
     </article>
     <p>
-      {{quizDate}}
+      {{quizDate | date: 'dd MMM, yyyy HH:mm'}} / {{quizDifficulty}}
   </div>
   <div class="quiz-result-ratings">
     <div>
       <p>Rating: </p>
-      <p> {{quizRate}}/10</p>
+      <p> {{quizRate}}/{{quizTotalQuestions}}</p>
     </div>
     <div>
       <p>Time: </p>
-      <p> {{quizTime}} Min.</p>
+      <p> {{convertMsToTime(quizTime)}}</p>
     </div>
   </div>
 </section>

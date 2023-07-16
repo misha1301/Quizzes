@@ -12,16 +12,21 @@
   font-style: normal;
   line-height: normal;
 }
-
+html{
+  width: 100%;
+  background-color: #f0223d;
+}
 body {
   height: 100%;
   width: 100%;
   min-height: 100vh;
   background-image: url("./assets/mesh-gradient.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center, 50%, 50%;
-  padding: var(--padding-global);
+  background-size:cover;
+  -o-background-size:cover;
+  -moz-background-size:cover;
+  -webkit-background-size:cover;
+  background-position: center center, 50%, 50%;
 }
 
 :root {
@@ -57,9 +62,13 @@ body {
   --font-medium-weight: 500;
 
   --quiz-block-height: 160px;
-  --pie-diagram-width:350px;
+  --pie-diagram-width:250px;
+  --pie-diagram-height:250px;
+  --pie-diagram-margin-top:15px;
 
-  --line: 1px dashed #8a959f;
+  /*--line: 1px dashed #8a959f;*/
+  --line: none;
+
   --btn-height: 40px;
   --btn-width: 150px;
   --btn-color-blue: #1b18ac;
@@ -108,6 +117,8 @@ body {
   :root {
     --gap-main-page: 10px;
     --margin-main-description-text: 20px 0;
+    --pie-diagram-height:200px;
+    --pie-diagram-margin-top:15px;
   }
 }
 
@@ -121,7 +132,7 @@ body {
 
 @media screen and (max-width: 400px) {
   :root {
-    --pie-diagram-width:130px;
+    --pie-diagram-width:200px;
   }
 }
 

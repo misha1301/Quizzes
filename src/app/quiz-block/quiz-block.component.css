@@ -5,7 +5,7 @@ section{
   justify-content: space-between;
   border-radius: 10px;
   background-color: rgba(23, 24, 51, 0.40);
-  backdrop-filter: blur(12px);
+  /*backdrop-filter: blur(12px);*/
 
   max-width: 820px;
   height: var(--quiz-block-height);

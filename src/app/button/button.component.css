@@ -5,6 +5,9 @@ input[type="button"] {
   border: 0;
   font-size: var(--btn-font-size);
   font-weight: var(--font-medium-weight);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
   outline: none !important;
 }
 

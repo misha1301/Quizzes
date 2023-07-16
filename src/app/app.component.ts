@@ -20,12 +20,12 @@ export class AppComponent {
     this.currentRoute = "";
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
-        console.log('Route change detected');
+        // console.log('Route change detected');
       }
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
         this.changeBtnParameters(event.url);
-        console.log(event);
+        // console.log(event);
       }
       if (event instanceof NavigationError) {
         console.log(event.error);
@@ -35,8 +35,14 @@ export class AppComponent {
   changeBtnParameters(currentRoute: string): void {
     switch (currentRoute) {
       case "/":
-        this.btnClass = "blue";
-        this.btnValue = "I`m lucky";
+        let result: any = localStorage.getItem('stats');
+        if (result == '' || result == null){
+          this.btnClass = "none";
+          this.btnValue = "My stats"
+        }else{
+          this.btnClass = "blue";
+          this.btnValue = "My stats";
+        }
         break;
       case "/take-quiz":
         this.btnClass = "yellow";
@@ -50,12 +56,17 @@ export class AppComponent {
   handleOnClick() {
     switch (this.currentRoute) {
       case "/":
-        this.navigateToQuizTest();
+        this.navigateToUserStatsPage();
         break;
       case "/take-quiz":
+        localStorage.removeItem('quizzes');
+        localStorage.removeItem('progress');
+        localStorage.removeItem('answers');
+        localStorage.removeItem('result');
         this.navigateToHomePage();
         break;
       default:
+        localStorage.removeItem('result');
         this.navigateToHomePage();
     }
   }
@@ -64,7 +75,7 @@ export class AppComponent {
       .then(succeeded => {
       })
       .catch(error => {
-        console.log("Routing to \"take-quiz\" error");
+        console.log("Routing to \"take-quiz\" error: ", error);
       });
   }
   navigateToHomePage(): void {
@@ -72,8 +83,15 @@ export class AppComponent {
       .then(succeeded => {
       })
       .catch(error => {
-        console.log("Routing to \"/\" error");
+        console.log("Routing to \"/\" error: ", error);
       });
   }
-
+  navigateToUserStatsPage(): void {
+    this.router.navigate(['/user-stats'], {relativeTo: this.activatedRoute})
+      .then(succeeded => {
+      })
+      .catch(error => {
+        console.log("Routing to \"/user-stats\" error: ", error);
+      });
+  }
 }

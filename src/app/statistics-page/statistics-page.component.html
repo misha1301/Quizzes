@@ -3,11 +3,26 @@
     Your statistics:
   </h2>
   <div class="user-stats-wrapper">
-    <app-quizzes-stats></app-quizzes-stats>
+    <app-quizzes-stats
+      [numberOfQuizzes]="numberOfQuizzes"
+      [totalAnswers]="totalAnswers"
+      [averageTime]="averageTime"
+      [pieDiagramSeries]="pieDiagramSeries"
+    >
+    </app-quizzes-stats>
+
     <div class="user-quiz-resul-wrapper">
-      <app-quiz-result-block></app-quiz-result-block>
-      <app-quiz-result-block></app-quiz-result-block>
-      <app-quiz-result-block></app-quiz-result-block>
+      <ng-template ngFor let-item [ngForOf]="userStatsArr" let-i="index">
+        <app-quiz-result-block
+          [quizName]="item['quizCategory']"
+          [quizDate]="item['startDate']"
+          [quizTime]="item['totalTime']"
+          [quizRate]="item['correctAnswers']"
+          [quizTotalQuestions]="item['quizTotalQuestions']"
+          [quizDifficulty]="item['quizDifficulty']"
+        >
+        </app-quiz-result-block>
+      </ng-template>
     </div>
   </div>
 </section>

@@ -10,14 +10,17 @@ article {
   font-size: var(--font-name-quizzes-size);
   font-weight: var(--font-semibold-weight);
   color: var(--font-color-level-1);
-  border: 1px #d5d5d5 dashed;
+  border: var(--line);
 }
 main {
   width: 100%;
   border: var(--line);
+
 }
 .main-app-section{
-  max-width: 1950px;
-  min-width: 250px;
+  position: relative;
+  max-width: 2050px;
+  min-width: 290px;
   margin: 0 auto;
+  padding: var(--padding-global);
 }
