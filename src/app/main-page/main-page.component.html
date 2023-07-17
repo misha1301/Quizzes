@@ -6,13 +6,27 @@
   <h3 class="addition-text">
     Choose an interesting topic below or select a random quiz by clicking on "I’m lucky":
   </h3>
+  <app-button [btnValue]="'I`m lucky'" [btnClass]="'yellow'" (onClick)="onHandlerStartQuiz('amount=10')"></app-button>
   <section class="quizzes-section">
-    <app-quiz-block [quizName]="'Books'" [quizData]="'Medium level / 10 questions'"></app-quiz-block>
-    <app-quiz-block [quizName]="'Film'" [quizData]="'Medium level / 10 questions'"></app-quiz-block>
-    <app-quiz-block [quizName]="'Music'" [quizData]="'Medium level / 10 questions'"></app-quiz-block>
-    <app-quiz-block [quizName]="'Musicals & Theatres'" [quizData]="'Medium level / 10 questions'"></app-quiz-block>
-    <app-quiz-block [quizName]="'History'" [quizData]="'Medium level / 10 questions'"></app-quiz-block>
-    <app-quiz-block [quizName]="'Politics'" [quizData]="'Medium level / 10 questions'"></app-quiz-block>
+    <app-quiz-block [quizName]="'Mythology'" [quizData]="'Medium level / 10 questions'"
+                    (onClick)="onHandlerStartQuiz('amount=10&category=20&difficulty=medium')"></app-quiz-block>
+    <app-quiz-block [quizName]="'Sports'" [quizData]="'Medium level / 10 questions'"
+                    (onClick)="onHandlerStartQuiz('amount=10&category=21&difficulty=medium')"></app-quiz-block>
+    <app-quiz-block [quizName]="'Science & Nature'" [quizData]="'Medium level / 10 questions'"
+                    (onClick)="onHandlerStartQuiz('amount=10&category=17&difficulty=medium')"></app-quiz-block>
+    <app-quiz-block [quizName]="'Geography'" [quizData]="'Medium level / 10 questions'"
+                    (onClick)="onHandlerStartQuiz('amount=10&category=22&difficulty=medium')"></app-quiz-block>
+    <app-quiz-block [quizName]="'History'" [quizData]="'Medium level / 10 questions'"
+                    (onClick)="onHandlerStartQuiz('amount=10&category=23&difficulty=medium')"></app-quiz-block>
+    <app-quiz-block [quizName]="'Politics'" [quizData]="'Medium level / 10 questions'"
+                    (onClick)="onHandlerStartQuiz('amount=10&category=24&difficulty=medium')"></app-quiz-block>
+    <app-quiz-block [quizName]="'Art'" [quizData]="'Medium level / 10 questions'"
+                    (onClick)="onHandlerStartQuiz('amount=10&category=25&difficulty=medium')"></app-quiz-block>
+    <app-quiz-block [quizName]="'Animals'" [quizData]="'Medium level / 10 questions'"
+                    (onClick)="onHandlerStartQuiz('amount=10&category=27&difficulty=medium')"></app-quiz-block>
+    <app-quiz-block [quizName]="'Vehicles'" [quizData]="'Medium level / 10 questions'"
+                    (onClick)="onHandlerStartQuiz('amount=10&category=28&difficulty=medium')"></app-quiz-block>
   </section>
+
 </section>
 

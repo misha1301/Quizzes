@@ -3,22 +3,24 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   width: 100%;
-  padding-top: 50px;
-
-  height: 110px;
-
   border: var(--line);
 }
-
 article {
-  font-size: 48px;
-  font-weight: 600;
-  border: 1px #d5d5d5 dashed;
+  font-size: var(--font-name-quizzes-size);
+  font-weight: var(--font-semibold-weight);
+  color: var(--font-color-level-1);
+  border: var(--line);
 }
+main {
+  width: 100%;
+  border: var(--line);
 
-main{
-    width: 100%;
-    border: var(--line);
+}
+.main-app-section{
+  position: relative;
+  max-width: 2050px;
+  min-width: 290px;
+  margin: 0 auto;
+  padding: var(--padding-global);
 }

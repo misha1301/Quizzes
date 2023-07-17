@@ -3,18 +3,24 @@
   flex-direction: column;
 }
 .main-section .main-text{
-  color: #463646;
-  font-size: 24px;
-  font-weight: 500;
+  color: var(--font-color-level-2);
+  font-size: var(--font-main-description-size);
+  font-weight: var(--font-medium-weight);
+  margin-top: 5px;
 }
 .main-section .addition-text{
-  font-size: 24px;
-  font-weight: 600;
-  margin: 30px 0;
+  font-size: var(--font-main-description-size);
+  font-weight: var(--font-semibold-weight);
+  margin: var(--margin-main-description-text);
+  color:var(--font-color-level-1)
+}
+.main-section > app-button{
+  margin-bottom: var(--margin-20);
+  margin-left: auto;
 }
 .quizzes-section{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
   gap: var(--gap-main-page);
+  grid-template-columns: repeat(auto-fit, minmax(var(--minmax-quizzes-grid), 1fr));
 }
+

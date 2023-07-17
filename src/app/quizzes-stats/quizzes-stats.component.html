@@ -1,0 +1,31 @@
+<section class="quiz-stats-section">
+  <section class="quiz-stats-data-section">
+    <div>
+      <h2>{{numberOfQuizzes}} {{numberOfQuizzes >= 2 ? ' quizzes' : ' quiz'}}</h2>
+      <p>{{numberOfQuizzes >= 2 ? 'were ' : 'was '}}played</p>
+    </div>
+    <div>
+      <h2>{{totalAnswers}} questions</h2>
+      <p>have been answered</p>
+    </div>
+    <div>
+      <h2>{{convertMsToTime(averageTime)}}</h2>
+      <p>average time of answering quizzes</p>
+    </div>
+  </section>
+  <section class="quiz-stats-diagram-section">
+    <div class="stats-diagram">
+      <div class="pie" [chart]="donutChart">
+      </div>
+    </div>
+    <div class="diagram-description">
+      <div>
+        <div class="circle correct-an"></div>
+        <p>{{pieDiagramSeries[0]}} Correct answers</p></div>
+      <div>
+        <div class="circle incorrect-an"></div>
+        <p>{{pieDiagramSeries[1]}} Incorrect answers</p></div>
+    </div>
+  </section>
+</section>
+

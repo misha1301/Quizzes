@@ -1,0 +1,19 @@
+<section>
+  <div class="quiz-result-name-section">
+    <article>
+      {{quizName}}
+    </article>
+    <p>
+      {{quizDate | date: 'dd MMM, yyyy HH:mm'}} / {{quizDifficulty}}
+  </div>
+  <div class="quiz-result-ratings">
+    <div>
+      <p>Rating: </p>
+      <p> {{quizRate}}/{{quizTotalQuestions}}</p>
+    </div>
+    <div>
+      <p>Time: </p>
+      <p> {{convertMsToTime(quizTime)}}</p>
+    </div>
+  </div>
+</section>

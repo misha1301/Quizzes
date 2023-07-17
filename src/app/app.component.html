@@ -1,11 +1,11 @@
-<header>
-  <article>Quizzes</article>
+<section class="main-app-section">
+  <header>
+    <article>Quizzes</article>
+    <app-button *ngIf="btnClass != 'none'" [btnValue]="btnValue" [btnClass]="btnClass" (onClick)="handleOnClick()"></app-button>
+  </header>
 
-  <app-button [btnValue]="'I`m lucky'" [btnClass]="'blue'" (onClick) = "log()"> </app-button>
-</header>
-
-<main>
-<!--  <app-main-page></app-main-page>-->
-  <app-quizzes-page></app-quizzes-page>
-  <router-outlet></router-outlet>
-</main>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <app-progress-spinner></app-progress-spinner>
+</section>

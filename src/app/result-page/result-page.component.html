@@ -1,1 +1,16 @@
-<p>result-page works!</p>
+<section class="quiz-result-page-section">
+  <h2>
+    Your result:
+  </h2>
+  <app-quiz-result-block
+    [quizName]="quizCategory"
+    [quizDate]="startDate"
+    [quizTime]="totalTime"
+    [quizRate]="correctAnswers"
+    [quizTotalQuestions]="quizTotalQuestions"
+    [quizDifficulty]="quizDifficulty"
+  >
+  </app-quiz-result-block>
+  <h2>See all your statistics:</h2>
+  <app-button [btnClass]="'blue'" [btnValue]="'My stats'" (onClick)="navigateToUserStatsPage()"></app-button>
+</section>

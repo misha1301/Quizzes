@@ -1,0 +1,6 @@
+.quiz-result-page-section h2{
+  margin: var(--margin-main-description-text);
+  font-size: var(--font-title-page-size);
+  font-weight: var(--font-semibold-weight);
+}
+
