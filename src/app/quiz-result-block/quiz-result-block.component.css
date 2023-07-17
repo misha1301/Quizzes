@@ -11,10 +11,16 @@ section{
   height: var(--quiz-block-height);
   padding: var(--padding-quiz-section)
 }
-
+section .quiz-result-name-section{
+width: 100%;
+}
 section .quiz-result-name-section > article{
   font-size: var(--font-title-quiz-block-size);
   font-weight: var(--font-semibold-weight);
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 section .quiz-result-name-section > p{
