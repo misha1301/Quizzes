@@ -134,51 +134,33 @@ export class QuizzesPageComponent implements OnInit {
     let answers: any = localStorage.getItem('answers');
     let progress: any = localStorage.getItem('progress');
 
-    let totalMark: number = 0;
-    let tempAnswers: any = JSON.parse(answers);
-    console.log(tempAnswers);
-    let tempQuizzes: any = JSON.parse(quizzes);
-    console.log(tempQuizzes);
-    let tempProgress: any = JSON.parse(progress);
-    console.log(tempProgress);
-    for (let i: number = 0; i < tempQuizzes.length; i++) {
-      if (tempQuizzes[i].answers[0].toString() == tempAnswers[i].toString()) {
-        totalMark++;
+    if (quizzes !== null && answers !== null && progress !== null ) {
+      let totalMark: number = 0;
+      let tempAnswers: any = JSON.parse(answers);
+      let tempQuizzes: any = JSON.parse(quizzes);
+      let tempProgress: any = JSON.parse(progress);
+      for (let i: number = 0; i < tempQuizzes.length; i++) {
+        if (tempQuizzes[i].answers[0].toString() == tempAnswers[i].toString()) {
+          totalMark++;
+        }
       }
-    }
+      const startedDate: Date = new Date(tempProgress.startDate);
+      const endDate: Date = new Date();
+      const msBetweenDates = endDate.getTime() - startedDate.getTime();
 
-    const startedDate: Date = new Date(tempProgress.startDate);
-    const endDate: Date = new Date();
+      localStorage.setItem('result', JSON.stringify({
+        "quizCategory": tempProgress.quizCategory,
+        "quizDifficulty": tempProgress.quizDifficulty,
+        "quizTotalQuestions": tempQuizzes.length,
+        "startDate": tempProgress.startDate,
+        "totalTime": msBetweenDates,
+        "correctAnswers": totalMark
+      }));
 
-    const msBetweenDates = endDate.getTime() - startedDate.getTime();
-
-    localStorage.setItem('result', JSON.stringify({
-      "quizCategory": tempProgress.quizCategory,
-      "quizDifficulty": tempProgress.quizDifficulty,
-      "quizTotalQuestions": tempQuizzes.length,
-      "startDate": tempProgress.startDate,
-      "totalTime": msBetweenDates,
-      "correctAnswers": totalMark
-    }));
-
-    let userStats: any = localStorage.getItem('stats');
-    if (userStats == null || userStats == '') {
-      localStorage.setItem('stats', JSON.stringify(
-        [{
-          "quizCategory": tempProgress.quizCategory,
-          "quizDifficulty": tempProgress.quizDifficulty,
-          "quizTotalQuestions": tempQuizzes.length,
-          "startDate": tempProgress.startDate,
-          "totalTime": msBetweenDates,
-          "correctAnswers": totalMark
-        }]
-      ));
-    } else {
-      let tempUserStats: any = JSON.parse(userStats);
-      localStorage.setItem('stats', JSON.stringify(
-        [
-          ...tempUserStats,
-          {
+      let userStats: any = localStorage.getItem('stats');
+      if (userStats == null || userStats == '') {
+        localStorage.setItem('stats', JSON.stringify(
+          [{
             "quizCategory": tempProgress.quizCategory,
             "quizDifficulty": tempProgress.quizDifficulty,
             "quizTotalQuestions": tempQuizzes.length,
@@ -186,7 +168,25 @@ export class QuizzesPageComponent implements OnInit {
             "totalTime": msBetweenDates,
             "correctAnswers": totalMark
           }]
-      ));
+        ));
+      } else {
+        let tempUserStats: any = JSON.parse(userStats);
+        localStorage.setItem('stats', JSON.stringify(
+          [
+            ...tempUserStats,
+            {
+              "quizCategory": tempProgress.quizCategory,
+              "quizDifficulty": tempProgress.quizDifficulty,
+              "quizTotalQuestions": tempQuizzes.length,
+              "startDate": tempProgress.startDate,
+              "totalTime": msBetweenDates,
+              "correctAnswers": totalMark
+            }]
+        ));
+      }
+    } else {
+      alert("Processing the result error!");
+      this.navigateToHomePage();
     }
   }
 

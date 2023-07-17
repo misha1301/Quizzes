@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap");
-/*@import "../node_modules/bootstrap/dist/css/bootstrap.css";*/
 
 * {
   padding: 0;
@@ -13,20 +12,20 @@
   line-height: normal;
 }
 html{
-  width: 100%;
-  background-color: #f0223d;
+  /*background-color: #f0223d;*/
+  background-color: #a720cc;
+
 }
+
 body {
-  height: 100%;
-  width: 100%;
   min-height: 100vh;
-  background-image: url("./assets/mesh-gradient.svg");
-  background-repeat: no-repeat;
-  background-size:cover;
-  -o-background-size:cover;
-  -moz-background-size:cover;
-  -webkit-background-size:cover;
-  background-position: center center, 50%, 50%;
+  /*background-image: url("./assets/mesh-gradient.svg");*/
+  /*background-repeat: no-repeat;*/
+  /*background-size:cover;*/
+  /*-o-background-size:cover;*/
+  /*-moz-background-size:cover;*/
+  /*-webkit-background-size:cover;*/
+  /*background-position: center center, 50%, 50%;*/
 }
 
 :root {

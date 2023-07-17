@@ -54,8 +54,8 @@ export class QuizzesStatsComponent implements OnInit {
       {
         type: 'pie',
         data: [
-          {name: 'incorrect', y: this.pieDiagramSeries[1], color: '#f9f9f9'},
-          {name: 'correct', y: this.pieDiagramSeries[0], color: '#a4da59'},
+          {name: 'incorrect',  description: 'Incorrect', y: this.pieDiagramSeries[1], color: '#f9f9f9'},
+          {name: 'correct',description: 'Correct', y: this.pieDiagramSeries[0], color: '#a4da59'},
         ],
       },
     ],
